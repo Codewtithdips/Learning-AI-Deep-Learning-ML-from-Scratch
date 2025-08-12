@@ -19,7 +19,6 @@ print('\n Table Description : ')
 for attr in table:
     print(attr)
 
-
 query2 = "select * from customers"
 
 
