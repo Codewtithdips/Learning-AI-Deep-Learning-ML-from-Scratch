@@ -2,6 +2,13 @@ import streamlit as st
 import requests
 import pandas as pd
 import time
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+api_key = os.getenv("FINNHUB_API_KEY")
 
 def fetch_stock_prices(symbol, api_key):
     """Fetches current stock prices from Finhub API"""
@@ -14,7 +21,7 @@ def fetch_stock_prices(symbol, api_key):
 st.set_page_config(page_title="Real-Time Stock Prices", layout="centered")
 st.title("📈 Real-Time Stock Price Monitor")
 
-api_key = "API_KEYfcRX7PLQ7Y114EPT13F1SQ1A1C6HSFBD"# Secure storage
+
 
 symbols = st.multiselect("Select Stocks", ["AAPL", "GOOGL", "MSFT", "AMZN", "TSLA"])
 
