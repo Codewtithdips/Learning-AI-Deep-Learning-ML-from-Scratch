@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-api_key = os.getenv("FINNHUB_API_KEY")
+api_key = os.getenv("FINNHUB_APIKEY")
 
 def fetch_stock_prices(symbol, api_key):
     """Fetches current stock prices from Finhub API"""
